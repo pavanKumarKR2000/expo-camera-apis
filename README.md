@@ -16,4 +16,8 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
     npx expo start
    ```
 
- ![banner](https://github.com/pavanKumarKR2000/chatty-frontend/blob/main/screenshot.png?raw=true)
+screenshots             |  screenshots
+:-------------------------:|:-------------------------:
+![banner](https://github.com/pavanKumarKR2000/expo-camera-apis/blob/main/screenshots/WhatsApp%20Image%202025-05-14%20at%209.43.57%20AM%20(1).jpeg) | ![banner](https://github.com/pavanKumarKR2000/expo-camera-apis/blob/main/screenshots/WhatsApp%20Image%202025-05-14%20at%209.43.57%20AM.jpeg) 
+![banner](https://github.com/pavanKumarKR2000/expo-camera-apis/blob/main/screenshots/WhatsApp%20Image%202025-05-14%20at%209.43.56%20AM%20(2).jpeg) | ![banner](https://github.com/pavanKumarKR2000/expo-camera-apis/blob/main/screenshots/WhatsApp%20Image%202025-05-14%20at%209.43.56%20AM%20(1).jpeg) 
+![banner](https://github.com/pavanKumarKR2000/expo-camera-apis/blob/main/screenshots/WhatsApp%20Image%202025-05-14%20at%209.43.56%20AM.jpeg) |
