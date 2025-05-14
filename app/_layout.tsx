@@ -1,5 +1,5 @@
 import { Slot, Stack, Tabs } from "expo-router";
-import { Text, View } from "react-native";
+import { StatusBar, Text, View } from "react-native";
 
 // export default function RootLayout() {
 //   return (
@@ -15,15 +15,18 @@ import { Text, View } from "react-native";
 
 export default function RootLayout() {
   return (
-    <Stack screenOptions={{ headerShown: false }}>
-      <Stack.Screen
-        name="index"
-        options={{ title: "Home", headerShown: false }}
-      />
-      <Stack.Screen
-        name="camera"
-        options={{ title: "camera", headerShown: false }}
-      />
-    </Stack>
+    <View style={{ flex: 1 }}>
+      <StatusBar barStyle="dark-content" />
+      <Stack screenOptions={{ headerShown: false }}>
+        <Stack.Screen
+          name="index"
+          options={{ title: "Home", headerShown: false }}
+        />
+        <Stack.Screen
+          name="camera"
+          options={{ title: "camera", headerShown: false }}
+        />
+      </Stack>
+    </View>
   );
 }
