@@ -18,10 +18,11 @@ import {
   Text,
   View,
 } from "react-native";
-import { Trash2 } from "lucide-react-native";
 
 import { Video } from "expo-av";
 import * as FileSystem from "expo-file-system";
+import CameraFlipIcon from "@/components/CameraFlipIcon";
+import BackIcon from "@/components/BackIcon";
 
 export default function CameraScreen() {
   const [permission, requestPermission] = useCameraPermissions();
@@ -128,7 +129,7 @@ export default function CameraScreen() {
           }}
         >
           <Text
-            style={{ backgroundColor: "blue", color: "white", padding: 10 }}
+            style={{ backgroundColor: "#8ecae6", padding: 10, borderRadius: 5 }}
           >
             Save Picture
           </Text>
@@ -141,7 +142,12 @@ export default function CameraScreen() {
             router.back();
           }}
         >
-          <ArrowLeft color="black" size={30} />
+          <BackIcon
+            height={20}
+            width={20}
+            onPress={() => router.back()}
+            fill="black"
+          />
         </Pressable>
       </View>
     );
@@ -156,7 +162,12 @@ export default function CameraScreen() {
         mode={mode}
       >
         <View style={styles.footer}>
-          <ArrowLeft size={30} color="white" onPress={() => router.back()} />
+          <BackIcon
+            height={20}
+            width={20}
+            onPress={() => router.back()}
+            fill="white"
+          />
           <Pressable
             style={[
               styles.recordButton,
@@ -168,7 +179,7 @@ export default function CameraScreen() {
               startRecording();
             }}
           />
-          <SwitchCamera size={30} color="white" onPress={toggleCameraFacing} />
+          <CameraFlipIcon height={40} width={40} onPress={toggleCameraFacing} />
         </View>
       </CameraView>
     </View>

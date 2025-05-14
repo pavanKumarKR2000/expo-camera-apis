@@ -5,6 +5,9 @@ import { Image, Pressable, View, StyleSheet } from "react-native";
 import { Video } from "expo-av";
 import { getMediaType } from "@/utils/media";
 import * as MediaLibrary from "expo-media-library";
+import SaveIcon from "@/components/SaveIcon";
+import DeleteIcon from "@/components/DeleteIcon";
+import BackIcon from "@/components/BackIcon";
 
 export default function ImageScreen() {
   const { fileName } = useLocalSearchParams<{ fileName: string }>();
@@ -49,11 +52,18 @@ export default function ImageScreen() {
           useNativeControls
         />
       )}
+
       <Pressable style={styles.floatingDeleteButton} onPress={onDelete}>
-        <Trash2 color="black" size={30} />
+        <DeleteIcon height={28} width={28} />
       </Pressable>
       <Pressable style={styles.floatingSaveButton} onPress={onSave}>
-        <Save color="black" size={30} />
+        <SaveIcon height={28} width={28} />
+      </Pressable>
+      <Pressable
+        style={styles.floatingBackButton}
+        onPress={() => router.back()}
+      >
+        <BackIcon height={20} width={20} />
       </Pressable>
     </View>
   );
@@ -74,6 +84,18 @@ const styles = StyleSheet.create({
     backgroundColor: "#8ecae6",
     position: "absolute",
     bottom: 10,
+    right: 80,
+  },
+  floatingBackButton: {
+    padding: 10,
+    borderRadius: "50%",
+    backgroundColor: "#8ecae6",
+    position: "absolute",
+    bottom: 10,
     left: 10,
+    height: 48,
+    width: 48,
+    alignItems: "center",
+    justifyContent: "center",
   },
 });

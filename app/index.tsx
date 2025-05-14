@@ -1,20 +1,13 @@
 import EmptyState from "@/components/EmptyState";
+import { ResizeMode, Video } from "expo-av";
 import * as FileSystem from "expo-file-system";
 import { Link, useFocusEffect } from "expo-router";
 import { Camera } from "lucide-react-native";
 import { useCallback, useState } from "react";
-import { LinearGradient } from "expo-linear-gradient";
-import { ResizeMode, Video } from "expo-av";
 
-import {
-  FlatList,
-  Image,
-  Pressable,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
 import { getMediaType, MediaType } from "@/utils/media";
+import { FlatList, Image, Pressable, StyleSheet, View } from "react-native";
+import CameraIcon from "@/components/CameraIcon";
 
 interface File {
   name: string;
@@ -99,17 +92,11 @@ export default function HomeScreen() {
           borderRadius: "100%",
           overflow: "hidden",
         }}
-      >
-        <LinearGradient
-          // Background Linear Gradient
-          colors={["#2A7B9B", "transparent"]}
-          style={{ height: "100%", width: "100%" }}
-        />
-      </View>
+      ></View>
 
       <Link href="/camera" asChild>
         <Pressable style={styles.floatingCameraButton}>
-          <Camera color="black" size={30} />
+          <CameraIcon height={28} width={28} />
         </Pressable>
       </Link>
     </View>
